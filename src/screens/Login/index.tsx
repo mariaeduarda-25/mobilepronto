@@ -9,14 +9,10 @@ import {
 import { MaterialIcons, Entypo } from "@expo/vector-icons";
 import Button from "../../components/Button";
 import styles from "./styles";
-import { LoginTypes } from "../../types/Screen.types";
 
-export default function Login({ navigation }: LoginTypes) {
+export default function Login() {
   async function handleSignIn() {
     console.log("Login");
-  }
-  function handleCadastrar() {
-    navigation.navigate("Cadastrar");
   }
 
   return (
@@ -26,7 +22,7 @@ export default function Login({ navigation }: LoginTypes) {
         style={styles.container}
       >
         <KeyboardAvoidingView>
-          <Text style={styles.title}>Login</Text>
+          <Text style={styles.title}>LOGIN</Text>
           <View style={styles.formRow}>
             <MaterialIcons name="email" style={styles.icon} />
             <TextInput
@@ -46,7 +42,7 @@ export default function Login({ navigation }: LoginTypes) {
             />
           </View>
           <Button title="Login" type="green" onPress={handleSignIn} />
-          <Button title="Cadastre-se" type="purple" onPress={handleCadastrar} />
+          <Button title="Cadastre-se" type="purple" onPress={handleSignIn} />
         </KeyboardAvoidingView>
       </ImageBackground>
     </View>
