@@ -1,3 +1,6 @@
+
+
+
 export default {
     black: '#000000',
     white: '#ffffff',
@@ -6,4 +9,4 @@ export default {
     purple: '#7E57C2',
     orange: '#FFB74D',
     orangeLight: '#FFE9CA'
-}
+  }
