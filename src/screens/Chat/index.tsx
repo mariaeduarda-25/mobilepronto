@@ -1,9 +1,18 @@
 import React from "react";
-import { ImageBackground, SafeAreaView, TextInput, View } from "react-native";
+import {
+  FlatList,
+  ImageBackground,
+  SafeAreaView,
+  TextInput,
+  View,
+} from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import styles from "./styles";
+import data from "../../services/data";
+import Card from "../../components/Card";
 
 export default function Chat() {
+  const renderItem = ({ item }: any) => <Card data={item} />;
   return (
     <ImageBackground
       source={require("../../assets/fundo.png")}
@@ -14,6 +23,11 @@ export default function Chat() {
           <FontAwesome5 name="search" style={styles.icon} />
           <TextInput placeholder="Pesquisar chat" />
         </View>
+        <FlatList
+          data={data}
+          renderItem={renderItem}
+          keyExtractor={(item) => String(item.id)}
+        />
       </SafeAreaView>
     </ImageBackground>
   );
