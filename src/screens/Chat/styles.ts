@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     width: "50%"
   },
   list: {
-    marginBottom: 2
+    marginBottom: 50
   }
 });
 
