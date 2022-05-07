@@ -21,13 +21,13 @@ export default function Chat() {
       <SafeAreaView style={styles.container}>
         <View style={styles.rowSearch}>
           <FontAwesome5 name="search" style={styles.icon} />
-          <TextInput placeholder="Pesquisar chat" style={styles.input}/>
+          <TextInput placeholder="Pesquisar chat" style={styles.input} />
         </View>
         <FlatList
           data={data}
           renderItem={renderItem}
           keyExtractor={(item) => String(item.id)}
-          style = {styles.list}
+          style={styles.list}
         />
       </SafeAreaView>
     </ImageBackground>

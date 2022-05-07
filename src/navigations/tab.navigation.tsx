@@ -1,6 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { PerfilScreen, ChatScreen } from "../screens";
+import { ChatScreen, PerfilScreen } from "../screens";
 import colors from "../styles/colors";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -13,7 +13,7 @@ export default function TabNavigation() {
         headerShown: false,
         tabBarActiveBackgroundColor: colors.secondary,
         tabBarActiveTintColor: colors.white,
-        tabBarInactiveBackgroundColor: colors.third,
+        tabBarInactiveBackgroundColor: colors.secondary,
         tabBarInactiveTintColor: colors.white,
       }}
     >
