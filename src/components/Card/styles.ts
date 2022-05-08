@@ -3,7 +3,7 @@ import colors from "../../styles/colors";
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: colors.thirdLight,
+    backgroundColor: colors.third,
     borderRadius: 10,
     margin: 10,
     width: "90%",

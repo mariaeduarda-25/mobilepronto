@@ -7,40 +7,30 @@ import Button from "../../components/Button";
 
 export default function Perfil() {
   return (
-    <ImageBackground
-      source={require("../../assets/fundo.png")}
-      style={styles.container}
-    >
+    <View style={styles.container}>
       <Image source={require("../../assets/lazaro.png")} />
-      <Text style={styles.title}>Lázaro Eduardo da Silva</Text>
+      <Text style={styles.title}>Nome Sobrenome</Text>
       <CardSocial>
         <>
-          <FontAwesome5 name="facebook" style={styles.icon} />
-          <Text style={styles.link}>https://facebook.com</Text>
+          <Text style={styles.link}> Habilitado há: 5 anos</Text>
         </>
       </CardSocial>
       <CardSocial>
         <>
-          <FontAwesome5 name="instagram" style={styles.icon} />
-          <Text style={styles.link}>https://instagram.com</Text>
-        </>
-      </CardSocial>
-      <CardSocial>
-        <>
-          <FontAwesome5 name="linkedin" style={styles.icon} />
-          <Text style={styles.link}>https://linkedin.com</Text>
+          <Text style={styles.link}> Avaliação: 5</Text>
+          <FontAwesome5 name="star" style={styles.icon} />
         </>
       </CardSocial>
       <Button
         title="Alterar Senha"
-        type="third"
+        type="primary"
         onPress={() => console.log("Alterar Senha")}
       />
       <Button
         title="Sair"
-        type="third"
+        type="primary"
         onPress={() => console.log("Sair")}
       />
-    </ImageBackground>
+      </View>
   );
 }

@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: '#092327'
   },
   title: {
     fontSize: 30,
@@ -36,6 +37,15 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: colors.secondary,
     padding: 10
+  },
+  imagem:{
+    alignItems: 'center',
+    width: 80,
+    height: 80
+  },
+  viewimage:{
+    alignItems: 'center',
+    margin: 10
   }
 })
 

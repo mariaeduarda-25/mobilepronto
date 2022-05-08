@@ -7,12 +7,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     resizeMode: "cover",
+    backgroundColor: "#092327"
   },
   title: {
     fontSize: 30,
     fontWeight: "bold",
     textAlign: "center",
-    color: colors.black,
+    color: colors.secondary,
     marginBottom: 20,
   },
   icon: {

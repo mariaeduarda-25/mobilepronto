@@ -6,12 +6,13 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor:"#092327"
   },
   title: {
     fontSize: 30,
     fontWeight: "bold",
     textAlign: "center",
-    color: colors.primary,
+    color: colors.secondary,
     marginBottom: 20,
   },
   formRow: {
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     borderWidth: 1,
-    borderColor: colors.primary,
+    borderColor: colors.secondary,
     borderRadius: 5,
   },
   label: {
@@ -30,12 +31,22 @@ const styles = StyleSheet.create({
   input: {
     fontSize: 18,
     padding: 5,
-    width: "80%"
+    width: "80%",
+    color: colors.third
   },
   icon: {
     fontSize: 24,
-    color: colors.primary,
+    color: colors.secondary,
     padding: 10
+  },
+  imagem:{
+    alignItems: 'center',
+    width: 80,
+    height: 80
+  },
+  viewimage:{
+    alignItems: 'center',
+    margin: 10
   }
 })
 

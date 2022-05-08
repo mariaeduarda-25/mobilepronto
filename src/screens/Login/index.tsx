@@ -4,7 +4,7 @@ import {
   Text,
   TextInput,
   KeyboardAvoidingView,
-  ImageBackground,
+  Image,
 } from "react-native";
 import { MaterialIcons, Entypo } from "@expo/vector-icons";
 import Button from "../../components/Button";
@@ -21,15 +21,15 @@ export default function Login({ navigation }: LoginTypes) {
 
   return (
     <View style={styles.container}>
-      <ImageBackground
-        source={require("../../assets/fundo.png")}
-        style={styles.container}
-      >
         <KeyboardAvoidingView>
-          <Text style={styles.title}>Login</Text>
+          <View style={styles.viewimage}>
+            <Image source={require("../../assets/favicon.png")} style={styles.imagem}/>
+          </View>
+          <Text style={styles.title}>LOGIN</Text>
           <View style={styles.formRow}>
             <MaterialIcons name="email" style={styles.icon} />
             <TextInput
+              placeholderTextColor='white'
               style={styles.input}
               placeholder="E-mail"
               keyboardType="email-address"
@@ -39,20 +39,20 @@ export default function Login({ navigation }: LoginTypes) {
           <View style={styles.formRow}>
             <Entypo name="key" style={styles.icon} />
             <TextInput
+              placeholderTextColor='white'
               style={styles.input}
               placeholder="Senha"
               secureTextEntry={true}
               autoCapitalize="none"
             />
           </View>
-          <Button title="Login" type="primary" onPress={handleSignIn} />
+          <Button title="Login" type="secondary" onPress={handleSignIn} />
           <Button
             title="Cadastre-se"
             type="secondary"
             onPress={handleCadastrar}
           />
         </KeyboardAvoidingView>
-      </ImageBackground>
     </View>
   );
 }

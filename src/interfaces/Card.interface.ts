@@ -7,10 +7,6 @@ export interface CardProps {
     nome: string,
     data: Date,
     titulo: string,
-    mensagem: string,
-    topico: {
-      id: number,
-      item: string
-    }[]
+    mensagem: string
   }
 }

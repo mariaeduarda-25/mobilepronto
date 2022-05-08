@@ -3,17 +3,18 @@ import colors from "../../styles/colors";
 
 const styles = StyleSheet.create({
   buttonGreen: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.secondary,
     borderRadius: 5,
-    margin: 10
+    margin: 10, 
+    width: '90%'
   },
   buttonPurple: {
     backgroundColor: colors.secondary,
     borderRadius: 5,
-    margin: 10
+    margin: 10,
   },
   buttonThird: {
-    backgroundColor: colors.third,
+    backgroundColor: colors.secondary,
     borderRadius: 5,
     margin: 10,
     width: '90%'
