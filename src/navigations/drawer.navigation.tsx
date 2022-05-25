@@ -13,13 +13,13 @@ export default function HomeRoute() {
         <Drawer.Navigator
                 screenOption={{
                     headerShown: true,
-                    headerStyle: { backgroundColor: colors.primary },
-                    headerTintColor: colors.white,
+                    headerStyle: { backgroundColor: colors.primary},
+                    headerTintColor: colors.primary,
                     drawerStyle: {
                         backgroundColor: colors.primary,
                     },
-                    drawerInactiveTintColor: colors.white,
-                    drawerActiveTintColor: colors.white,
+                    drawerInactiveTintColor: colors.primary,
+                    drawerActiveTintColor: colors.primary,
                 }}
             >
             <Drawer.Screen
@@ -28,7 +28,7 @@ export default function HomeRoute() {
                 options={{
                     drawerLabel: "Perfil",
                     drawerIcon: () => (
-                        <Ionicons name="person" size={24} color={colors.white} />
+                        <Ionicons name="person" size={24} color={colors.primary} />
                     )
                 }}
             />
@@ -38,7 +38,7 @@ export default function HomeRoute() {
                 options={{
                     drawerLabel: "Chat",
                     drawerIcon: () => (
-                        <Ionicons name="chatbubbles" size={24} color={colors.white} />
+                        <Ionicons name="chatbubbles" size={24} color={colors.primary} />
                     ),
                 }}
             />
@@ -48,7 +48,7 @@ export default function HomeRoute() {
                 options={{
                     drawerLabel: "Mapa",
                     drawerIcon: () => (
-                        <Ionicons name="map" size={24} color={colors.white} />
+                        <Ionicons name="map" size={24} color={colors.primary} />
                     ),
                 }}
             />
