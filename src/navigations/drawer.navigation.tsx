@@ -1,41 +1,57 @@
 import React from "react";
+import { Text, StyleSheet } from "react-native"
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { ChatScreen, PerfilScreen } from "../screens";
+import {Ionicons } from "@expo/vector-icons";
 import colors from "../styles/colors";
-import { Ionicons } from "@expo/vector-icons";
+import { ChatScreen, MapScreen, PerfilScreen } from "../screens";
+import DrawerNavigation from "./drawer.navigation";
 
 const Drawer = createDrawerNavigator();
 
-export default function DrawerNavigation() {
-  return (
-    <Drawer.Navigator
-      screenOptions={{
-        headerShown: true,
-        headerStyle: { backgroundColor: colors.secondary },
-        headerTintColor: colors.white,
-        drawerStyle: { backgroundColor: colors.secondary },
-        drawerActiveTintColor: colors.white,
-        drawerInactiveTintColor: colors.white,
-      }}
-    >
-      <Drawer.Screen
-        name="Perfil"
-        component={PerfilScreen}
-        options={{
-          drawerIcon: () => (
-            <Ionicons name="person" size={24} color={colors.white} />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        name="Chat"
-        component={ChatScreen}
-        options={{
-          drawerIcon: () => (
-            <Ionicons name="chatbubbles" size={24} color={colors.white} />
-          ),
-        }}
-      />
-    </Drawer.Navigator>
-  );
+export default function HomeRoute() {
+    return (
+        <Drawer.Navigator
+                screenOption={{
+                    headerShown: true,
+                    headerStyle: { backgroundColor: colors.primary },
+                    headerTintColor: colors.white,
+                    drawerStyle: {
+                        backgroundColor: colors.primary,
+                    },
+                    drawerInactiveTintColor: colors.white,
+                    drawerActiveTintColor: colors.white,
+                }}
+            >
+            <Drawer.Screen
+                name="Perfil"
+                component={PerfilScreen}
+                options={{
+                    drawerLabel: "Perfil",
+                    drawerIcon: () => (
+                        <Ionicons name="person" size={24} color={colors.white} />
+                    )
+                }}
+            />
+            <Drawer.Screen
+                name="Chat"
+                component={ChatScreen}
+                options={{
+                    drawerLabel: "Chat",
+                    drawerIcon: () => (
+                        <Ionicons name="chatbubbles" size={24} color={colors.white} />
+                    ),
+                }}
+            />
+            <Drawer.Screen
+                name="Mapa"
+                component={MapScreen}
+                options={{
+                    drawerLabel: "Mapa",
+                    drawerIcon: () => (
+                        <Ionicons name="map" size={24} color={colors.white} />
+                    ),
+                }}
+            />
+        </Drawer.Navigator>
+    );
 }
