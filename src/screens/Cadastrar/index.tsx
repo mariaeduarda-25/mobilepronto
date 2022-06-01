@@ -16,6 +16,7 @@ import { LoginTypes } from "../../types/Screen.types";
 import { IRegister } from "../../interfaces/User.interface";
 import { AxiosError } from "axios";
 import { IResponse } from "../../interfaces/Response.interface";
+import { useAuth } from "../../hook/auth";
 
 export default function Cadastrar({ navigation }: LoginTypes) {
   const { register } = useAuth();
@@ -82,7 +83,7 @@ export default function Cadastrar({ navigation }: LoginTypes) {
                 <TextInput
                   placeholderTextColor='white'
                   style={styles.input}
-                  placeholder="Email"
+                  placeholder="E-mail"
                   keyboardType="email-address"
                   autoCapitalize="none"
                   onChangeText={(i) => handleChange({ email: i })}

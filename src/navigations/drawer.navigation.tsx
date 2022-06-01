@@ -58,7 +58,7 @@ export default function HomeRoute() {
                 options={{
                     drawerLabel: "Sair",
                     drawerIcon: () => (
-                        <Ionicons name="exit" size={24} color={colors.white} />
+                        <Ionicons name="exit" size={24} color={colors.primary} />
                     ),
                 }}
             />

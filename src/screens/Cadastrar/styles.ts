@@ -31,7 +31,9 @@ const styles = StyleSheet.create({
   input: {
     fontSize: 18,
     padding: 5,
-    width: "80%"
+    width: "80%",
+    color: colors.white
+
   },
   icon: {
     fontSize: 24,
