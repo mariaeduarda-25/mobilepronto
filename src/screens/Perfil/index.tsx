@@ -10,7 +10,7 @@ export default function Perfil() {
   const { user } = useAuth();
   return (
     <View style={styles.container}>
-      <Image source={{ uri: user?.profile_photo_url }}/>
+      <Image source={{ uri: user?.profile_photo_url }} style={styles.img}/>
       <Text style={styles.title}>{user?.name}>Nome Sobrenome</Text>
       <CardSocial>
         <>
