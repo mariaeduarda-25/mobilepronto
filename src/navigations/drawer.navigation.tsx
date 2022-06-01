@@ -3,7 +3,7 @@ import { Text, StyleSheet } from "react-native"
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import {Ionicons } from "@expo/vector-icons";
 import colors from "../styles/colors";
-import { ChatScreen, MapScreen, PerfilScreen } from "../screens";
+import { ChatScreen, MapScreen, PerfilScreen, SairScreen } from "../screens";
 import DrawerNavigation from "./drawer.navigation";
 
 const Drawer = createDrawerNavigator();
@@ -49,6 +49,16 @@ export default function HomeRoute() {
                     drawerLabel: "Mapa",
                     drawerIcon: () => (
                         <Ionicons name="map" size={24} color={colors.primary} />
+                    ),
+                }}
+            />
+            <Drawer.Screen
+                name="Sair"
+                component={SairScreen}
+                options={{
+                    drawerLabel: "Sair",
+                    drawerIcon: () => (
+                        <Ionicons name="exit" size={24} color={colors.white} />
                     ),
                 }}
             />

@@ -4,12 +4,14 @@ import CardSocial from "../../components/CardSocial";
 import { FontAwesome5 } from "@expo/vector-icons";
 import styles from "./styles";
 import Button from "../../components/Button";
+import { useAuth } from "../../hook/auth";
 
 export default function Perfil() {
+  const { user } = useAuth();
   return (
     <View style={styles.container}>
-      <Image source={require("../../assets/lazaro.png")} />
-      <Text style={styles.title}>Nome Sobrenome</Text>
+      <Image source={{ uri: user?.profile_photo_url }}/>
+      <Text style={styles.title}>{user?.name}>Nome Sobrenome</Text>
       <CardSocial>
         <>
           <Text style={styles.link}> Habilitado há: 5 anos</Text>
