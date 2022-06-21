@@ -11,7 +11,7 @@ export default function Perfil() {
   return (
     <View style={styles.container}>
       <Image source={{ uri: user?.profile_photo_url }} style={styles.img}/>
-      <Text style={styles.title}>{user?.name}>Nome Sobrenome</Text>
+      <Text style={styles.title}>{user?.name}</Text>
       <CardSocial>
         <>
           <Text style={styles.link}> Habilitado há: 5 anos</Text>
