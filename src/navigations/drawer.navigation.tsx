@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, StyleSheet } from "react-native"
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import {Ionicons } from "@expo/vector-icons";
+import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../styles/colors";
-import { ChatScreen, MapScreen, PerfilScreen, SairScreen } from "../screens";
+import { ChatScreen, MapScreen, PerfilScreen, SairScreen, QrCodeScreen } from "../screens";
 import DrawerNavigation from "./drawer.navigation";
 
 const Drawer = createDrawerNavigator();
@@ -11,17 +11,17 @@ const Drawer = createDrawerNavigator();
 export default function HomeRoute() {
     return (
         <Drawer.Navigator
-                screenOption={{
-                    headerShown: true,
-                    headerStyle: { backgroundColor: colors.primary},
-                    headerTintColor: colors.primary,
-                    drawerStyle: {
-                        backgroundColor: colors.primary,
-                    },
-                    drawerInactiveTintColor: colors.primary,
-                    drawerActiveTintColor: colors.primary,
-                }}
-            >
+            screenOption={{
+                headerShown: true,
+                headerStyle: { backgroundColor: colors.primary },
+                headerTintColor: colors.primary,
+                drawerStyle: {
+                    backgroundColor: colors.primary,
+                },
+                drawerInactiveTintColor: colors.primary,
+                drawerActiveTintColor: colors.primary,
+            }}
+        >
             <Drawer.Screen
                 name="Perfil"
                 component={PerfilScreen}
@@ -62,6 +62,21 @@ export default function HomeRoute() {
                     ),
                 }}
             />
+            <Drawer.Screen
+                name="QrCode"
+                component={QrCodeScreen}
+                options={{
+                    drawerLabel: "QrCode",
+                    drawerIcon: () => (
+                        <MaterialCommunityIcons
+                            name="qrcode-scan"
+                            size={24}
+                            color={colors.white}
+                        />
+                    ),
+                }}
+            />
+
         </Drawer.Navigator>
-    );
+    )
 }
