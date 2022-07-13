@@ -18,7 +18,7 @@ const QrCode = () => {
     }, []);
     const handleBarCodeScanned = ({ type, data }: BarCodeScannerResult) => {
         setScanned(true);
-        alert('Bar code with type ${type} and data ${data} has ben scanned!');
+        alert(data);
     };
     if (hasPermission === null) {
         return <Text> Requesting for camera permission </Text>;
@@ -28,10 +28,7 @@ const QrCode = () => {
     }
 
     return (
-        <ImageBackground
-            source={require("../../assets.fundo.png")}
-            style={styles.scanner}
-        >
+        <>
             <View style={styles.centraliza}>
                 <BarCodeScanner
                     onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
@@ -45,7 +42,7 @@ const QrCode = () => {
                     onPress={() => setScanned(false)}
                 />
             )}
-        </ImageBackground>
+        </>
     );
 };
 
