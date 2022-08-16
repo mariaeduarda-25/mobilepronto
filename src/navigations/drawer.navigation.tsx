@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, StyleSheet } from "react-native"
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import {Ionicons } from "@expo/vector-icons";
+import {Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../styles/colors";
-import { ChatScreen, MapScreen, PerfilScreen, SairScreen } from "../screens";
+import { ChatScreen, MapScreen, PerfilScreen, SairScreen, CameraScreen, ArquivoScreen } from "../screens";
 import DrawerNavigation from "./drawer.navigation";
 
 const Drawer = createDrawerNavigator();
@@ -62,6 +62,43 @@ export default function HomeRoute() {
                     ),
                 }}
             />
+
+            <Drawer.Screen
+                name="Camera"
+                component={CameraScreen}
+                options={{
+                    drawerLabel: "Camera",
+                    drawerIcon: () => (
+                        <MaterialCommunityIcons
+                            name="camera"
+                            size={24}
+                            color={colors.white}
+                        />
+                    ),
+                }}
+            />
+
+            <Drawer.Screen
+                name="Arquivos"
+                component={ArquivoScreen}
+                options={{
+                    drawerLabel: "Arquivos",
+                    drawerIcon: () => (
+                        <MaterialCommunityIcons
+                            name="camera"
+                            size={24}
+                            color={colors.white}
+                        />
+                    ),
+                }}
+            />  
         </Drawer.Navigator>
     );
 }
+
+
+
+
+
+
+
