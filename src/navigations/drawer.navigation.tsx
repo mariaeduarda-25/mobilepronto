@@ -72,7 +72,7 @@ export default function HomeRoute() {
                         <MaterialCommunityIcons
                             name="camera"
                             size={24}
-                            color={colors.white}
+                            color={colors.primary}
                         />
                     ),
                 }}
@@ -85,9 +85,9 @@ export default function HomeRoute() {
                     drawerLabel: "Arquivos",
                     drawerIcon: () => (
                         <MaterialCommunityIcons
-                            name="camera"
+                            name="file-account"
                             size={24}
-                            color={colors.white}
+                            color={colors.primary}
                         />
                     ),
                 }}

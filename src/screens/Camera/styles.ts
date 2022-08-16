@@ -63,13 +63,14 @@ const styles = StyleSheet.create({
     buttonTop: {
         flex: 1,
         backgroundColor: "transparent",
-        flexDirection: "row"
+        flexDirection: "row",
     },
 
     buttonTopPostion: {
         position: "absolute",
         top: "5%",
-        right:"5%"
+        right:"5%",
+        marginRight: 100
     },
 
     textClose: {
@@ -80,13 +81,29 @@ const styles = StyleSheet.create({
     buttonFlip: {
         position: "absolute",
         top: "5%",
-        left: "5%"
+        left: "5%",
+        color: colors.black,
+        width: 100,
+        backgroundColor: colors.black,
+        alignItems: "center",
+        borderRadius: 15
+    },
+
+    buttonFlip2: {
+        position: "absolute",
+        top: "5%",
+        left: "5%",
+        color: colors.black,
+        width: 100,
+        backgroundColor: colors.black,
+        alignItems: "center",
+        borderRadius: 15,
     },
 
     textFlip: {
         fontSize: 18,
-        marginBottom: 10,
-        color: colors.white
+        marginBottom: 3,
+        color: colors.white,
     },
 
     viewTakePicture: {
