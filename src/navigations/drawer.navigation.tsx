@@ -1,54 +1,47 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native"
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
+import { ChatScreen, PerfilScreen, MapScreen, SairScreen, QrCodeScreen, CameraScreen, ArquivoScreen } from "../screens";
 import colors from "../styles/colors";
-import { ChatScreen, MapScreen, PerfilScreen, SairScreen, QrCodeScreen } from "../screens";
-import DrawerNavigation from "./drawer.navigation";
+import { Ionicons, Feather, MaterialCommunityIcons } from "@expo/vector-icons";
 
 const Drawer = createDrawerNavigator();
 
-export default function HomeRoute() {
+export default function DrawerNavigation() {
     return (
         <Drawer.Navigator
-            screenOption={{
+            screenOptions={{
                 headerShown: true,
-                headerStyle: { backgroundColor: colors.primary },
-                headerTintColor: colors.primary,
-                drawerStyle: {
-                    backgroundColor: colors.primary,
-                },
-                drawerInactiveTintColor: colors.primary,
-                drawerActiveTintColor: colors.primary,
+                headerStyle: { backgroundColor: colors.secondary },
+                headerTintColor: colors.white,
+                drawerStyle: { backgroundColor: colors.secondary },
+                drawerActiveTintColor: colors.white,
+                drawerInactiveTintColor: colors.white,
             }}
         >
             <Drawer.Screen
                 name="Perfil"
                 component={PerfilScreen}
                 options={{
-                    drawerLabel: "Perfil",
                     drawerIcon: () => (
-                        <Ionicons name="person" size={24} color={colors.primary} />
-                    )
+                        <Ionicons name="person" size={24} color={colors.white} />
+                    ),
                 }}
             />
             <Drawer.Screen
                 name="Chat"
                 component={ChatScreen}
                 options={{
-                    drawerLabel: "Chat",
                     drawerIcon: () => (
-                        <Ionicons name="chatbubbles" size={24} color={colors.primary} />
+                        <Ionicons name="chatbubbles" size={24} color={colors.white} />
                     ),
                 }}
             />
             <Drawer.Screen
-                name="Mapa"
+                name="Map"
                 component={MapScreen}
                 options={{
-                    drawerLabel: "Mapa",
                     drawerIcon: () => (
-                        <Ionicons name="map" size={24} color={colors.primary} />
+                        <Feather name="map-pin" size={24} color={colors.white} />
                     ),
                 }}
             />
@@ -58,7 +51,7 @@ export default function HomeRoute() {
                 options={{
                     drawerLabel: "Sair",
                     drawerIcon: () => (
-                        <Ionicons name="exit" size={24} color={colors.primary} />
+                        <Ionicons name="exit" size={24} color={colors.white} />
                     ),
                 }}
             />
@@ -76,7 +69,34 @@ export default function HomeRoute() {
                     ),
                 }}
             />
-
+            <Drawer.Screen
+                name="Camera"
+                component={CameraScreen}
+                options={{
+                    drawerLabel: "Câmera",
+                    drawerIcon: () => (
+                        <MaterialCommunityIcons
+                            name="camera"
+                            size={24}
+                            color={colors.white}
+                        />
+                    ),
+                }}
+            />
+            <Drawer.Screen
+                name="Arquivos"
+                component={ArquivoScreen}
+                options={{
+                    drawerLabel: "Arquivos",
+                    drawerIcon: () => (
+                        <MaterialCommunityIcons
+                            name="file-account"
+                            size={24}
+                            color={colors.white}
+                        />
+                    ),
+                }}
+            />
         </Drawer.Navigator>
     )
 }
