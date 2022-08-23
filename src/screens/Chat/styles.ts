@@ -28,7 +28,11 @@ const styles = StyleSheet.create({
   },
   list: {
     marginBottom: 10
-  }
+  },
+  img: {
+    width: 100,
+    height: 100,
+    }
 });
 
 export default styles
