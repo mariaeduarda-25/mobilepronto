@@ -59,7 +59,6 @@ const styles = StyleSheet.create({
         alignItems: "center",
         borderRadius: 4,
     },
-
     buttonTop: {
         flex: 1,
         backgroundColor: "transparent",
