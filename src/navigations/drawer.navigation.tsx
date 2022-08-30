@@ -1,15 +1,8 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-<<<<<<< HEAD
-import {Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
+import {Ionicons, MaterialCommunityIcons,Feather } from "@expo/vector-icons";
 import colors from "../styles/colors";
-import { ChatScreen, MapScreen, PerfilScreen, SairScreen, CameraScreen, ArquivoScreen } from "../screens";
-import DrawerNavigation from "./drawer.navigation";
-=======
-import { ChatScreen, PerfilScreen, MapScreen, SairScreen, QrCodeScreen, CameraScreen, ArquivoScreen } from "../screens";
-import colors from "../styles/colors";
-import { Ionicons, Feather, MaterialCommunityIcons } from "@expo/vector-icons";
->>>>>>> cc8e94f89721670200811abcfd4304f2658b99da
+import { ChatScreen, MapScreen, PerfilScreen, SairScreen, CameraScreen, ArquivoScreen, QrCodeScreen } from "../screens";
 
 const Drawer = createDrawerNavigator();
 
@@ -135,7 +128,6 @@ export default function DrawerNavigation() {
                 }}
             />  
         </Drawer.Navigator>
-<<<<<<< HEAD
     );
 }
 
@@ -145,7 +137,3 @@ export default function DrawerNavigation() {
 
 
 
-=======
-    )
-}
->>>>>>> cc8e94f89721670200811abcfd4304f2658b99da

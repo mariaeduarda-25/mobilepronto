@@ -21,10 +21,7 @@
     "axios": "^0.27.2",
     "date-fns": "^2.29.2",
     "expo": "~44.0.0",
-<<<<<<< HEAD
-=======
     "expo-barcode-scanner": "~11.2.0",
->>>>>>> cc8e94f89721670200811abcfd4304f2658b99da
     "expo-camera": "~12.1.2",
     "expo-image-picker": "~12.0.1",
     "expo-location": "~14.0.1",
