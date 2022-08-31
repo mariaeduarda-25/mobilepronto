@@ -26,13 +26,27 @@ const styles = StyleSheet.create({
     width: "40%",
     color: colors.third
   },
+  button: {
+    position: "absolute",
+    bottom: 0,
+    right: 0,
+    backgroundColor:
+   colors.secondary,
+    width: 50,
+    height: 50,
+    borderRadius: 50,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    },
+    buttonText: {
+    color: colors.white,
+    fontSize: 28,
+    fontWeight: "bold",
+  },
   list: {
     marginBottom: 10
-  },
-  img: {
-    width: 100,
-    height: 100,
-    }
+  }
 });
 
 export default styles
