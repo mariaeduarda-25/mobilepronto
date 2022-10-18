@@ -9,4 +9,5 @@ export {default as ArquivoScreen} from "./Arquivo"
 export {default as QrCodeScreen} from "./QrCode"
 export {default as EnviarMensagemScreen} from "./EnviarMensagem"
 export {default as VideoAudioScreen} from "./VideoAudio"
+export {default as AcelerometroScreen} from "./Acelerometro"
 
