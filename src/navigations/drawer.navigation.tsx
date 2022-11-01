@@ -1,9 +1,9 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import ChatNavigation from "./chat.navigation";
-import {Ionicons, MaterialCommunityIcons,Feather, FontAwesome, Foundation } from "@expo/vector-icons";
+import { Ionicons, MaterialCommunityIcons, Feather, FontAwesome, Foundation } from "@expo/vector-icons";
 import colors from "../styles/colors";
-import { ChatScreen, MapScreen, PerfilScreen, SairScreen, CameraScreen, ArquivoScreen, QrCodeScreen, VideoAudioScreen, AcelerometroScreen, PedometroScreen } from "../screens";
+import { ChatScreen, MapScreen, PerfilScreen, SairScreen, CameraScreen, ArquivoScreen, QrCodeScreen, VideoAudioScreen, AcelerometroScreen, PedometroScreen, GyroscopioScreen, MagnetoScreen } from "../screens";
 
 const Drawer = createDrawerNavigator();
 
@@ -28,7 +28,7 @@ export default function DrawerNavigation() {
                     ),
                 }}
             />
-           
+
             <Drawer.Screen
                 name="Map"
                 component={MapScreen}
@@ -62,7 +62,7 @@ export default function DrawerNavigation() {
                     ),
                 }}
             />
-           
+
             <Drawer.Screen
                 name="Camera"
                 component={CameraScreen}
@@ -91,33 +91,33 @@ export default function DrawerNavigation() {
                         />
                     ),
                 }}
-            />  
-             <Drawer.Screen
+            />
+            <Drawer.Screen
                 name="ChatNavigation"
                 component={ChatNavigation}
                 options={{
-                    title:"Chat",
+                    title: "Chat",
                     drawerLabel: "Chat",
                     drawerIcon: () => (
-                      <Ionicons name="chatbubbles" size={24} color={colors.primary}/>
+                        <Ionicons name="chatbubbles" size={24} color={colors.primary} />
                     ),
                 }}
             />
             <Drawer.Screen
-               name="AudioVideo"
-               component={VideoAudioScreen}
-               options={{
-                   drawerLabel: "Áudio Vídeo",
-                   drawerIcon: () => (
-                       <MaterialCommunityIcons 
-                       name= "video"
-                       size={24}
-                       color={colors.primary}
-                       />
-                   ),
-               }}
+                name="AudioVideo"
+                component={VideoAudioScreen}
+                options={{
+                    drawerLabel: "Áudio Vídeo",
+                    drawerIcon: () => (
+                        <MaterialCommunityIcons
+                            name="video"
+                            size={24}
+                            color={colors.primary}
+                        />
+                    ),
+                }}
             />
-        <Drawer.Screen
+            <Drawer.Screen
                 name="Acelerometro"
                 component={AcelerometroScreen}
                 options={{
@@ -130,8 +130,8 @@ export default function DrawerNavigation() {
                         />
                     ),
                 }}
-            />  
-             <Drawer.Screen
+            />
+            <Drawer.Screen
                 name="Pedometro"
                 component={PedometroScreen}
                 options={{
@@ -144,7 +144,35 @@ export default function DrawerNavigation() {
                         />
                     ),
                 }}
-            />  
+            />
+            <Drawer.Screen
+                name="Gyroscopio"
+                component={GyroscopioScreen}
+                options={{
+                    drawerLabel: "Gyroscópio",
+                    drawerIcon: () => (
+                        <FontAwesome
+                            name="balance-scale"
+                            size={24}
+                            color={colors.primary}
+                        />
+                    ),
+                }}
+            />
+            <Drawer.Screen
+                name="Magneto"
+                component={MagnetoScreen}
+                options={{
+                    drawerLabel: "Magneto",
+                    drawerIcon: () => (
+                        <FontAwesome
+                            name="magnet"
+                            size={24}
+                            color={colors.primary}
+                        />
+                    ),
+                }}
+            />
         </Drawer.Navigator>
     )
 }
